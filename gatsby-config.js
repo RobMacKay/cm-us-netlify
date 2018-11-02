@@ -52,6 +52,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Casino Meister USA',
+        short_name: 'CM USA',
+        start_url: '/',
+        background_color: '#fff',
+        theme_color: '#fff',
+        display: 'minimal-ui',
+        icon: 'src/images/cmicon.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-offline',
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
