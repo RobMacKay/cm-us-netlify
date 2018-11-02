@@ -1,40 +1,48 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import $ from 'jquery'
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
+  <nav className="navbar">
     <div className="container">
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
+        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={click}>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
+      </div>
+      <div className="navbar-menu" id="navbarBasicExample">
+        <div className="navbar-start">
+          <Link className="navbar-item" to="/">
+            Home
+          </Link>
+          <Link className="navbar-item" to="/casino-reviews">
+            Online Casino Reviews
+          </Link>
+          <Link className="navbar-item" to="/bonus-offers">
+            Online Casino Bonuses
+          </Link>
+          <Link className="navbar-item" to="/us-legal-gambling">
+            USA Legal Gambling
+          </Link>
+        </div>
+      
+      <div className="navbar-end">
+
+      </div>
       </div>
     </div>
   </nav>
 )
+
+const click = () => {
+
+  // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+  $(".navbar-burger").toggleClass("is-active");
+  $(".navbar-menu").toggleClass("is-active");
+
+}
+
 
 export default Navbar

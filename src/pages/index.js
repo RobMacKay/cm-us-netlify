@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import cmtm from '../img/cmtm.jpg'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,7 +14,12 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+              <h1 className="has-text-weight-bold is-size-1-mobile">US Licensed Casinos: Online Casino Authority - Advocate of Fair Play</h1>
+              <div className="text">
+                <img src={cmtm} alt="cm" className="alignleft"/>
+                <p>Legal Online Gambling in the US: Casinomeister has been the advocate of fair play since its inception in 1998, and we have been the main platform for player grievances, experiences, and what is right - and what is wrong with the online casino industry. Hands down - we are the authority on online gambling.</p>
+                <p>Casinomeister USA - Our mission: to provide US residents properly licensed US online casinos, crucial player information, and the resources to make waves (politically speaking) if you are unable to place an online wager in your state. If your state allows legalized gambling in any shape or form, then obviously you should have the right to play at home with a compliant and regulated online casino.</p>
+              </div>
             </div>
             {posts
               .map(({ node: post }) => (

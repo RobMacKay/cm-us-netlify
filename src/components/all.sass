@@ -1,11 +1,34 @@
-@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma"
 
-// Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
+body 
+  margin-top: 52px
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+.navbar
+  background-color: #000
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  a 
+    color: #fff
+      
+  a:hover 
+    background-color: #292929
+    color: #fff
+
+.navbar-menu 
+  background: #000
+
+.siteHeader
+  background-image: linear-gradient(#320202, #CA0202)
+
+.prince 
+  background-image: url('../img/LogoImage_Prince.png')
+  background-repeat: no-repeat
+  background-position: bottom right
+  padding: 2em 0
+  @media screen and (max-width: 400px)
+    background-image: none
 
 .content .taglist
   list-style: none
@@ -21,6 +44,9 @@ $primary-invert: $kaldi-red-invert
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
+
+.content 
+  margin-bottom: 2em
 
 // Helper Classes
 .full-width-image-container
@@ -39,4 +65,30 @@ $primary-invert: $kaldi-red-invert
 .margin-top-0
   margin-top: 0 !important
 
-@import "~bulma"
+.video
+  width: 300px
+  float: right
+
+.videoWrapper 
+	position: relative
+	padding-bottom: 56.25% /* 16:9 */
+	padding-top: 25px
+	height: 0
+  float: right
+
+.videoWrapper iframe 
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.alignleft 
+  float: left
+  margin: 0 1em 1em 0
+
+footer 
+  background: #000
+  color: #fff
+  padding: 1em
+  font-size: 0.8em
